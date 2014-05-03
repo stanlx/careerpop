@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Survey header:</strong>
+  <%= @survey_section.survey_header_id %>
+</p>
+
+<p>
+  <strong>Section name:</strong>
+  <%= @survey_section.section_name %>
+</p>
+
+<p>
+  <strong>Section title:</strong>
+  <%= @survey_section.section_title %>
+</p>
+
+<p>
+  <strong>Section subheading:</strong>
+  <%= @survey_section.section_subheading %>
+</p>
+
+<p>
+  <strong>Section required:</strong>
+  <%= @survey_section.section_required %>
+</p>
+
+<%= link_to 'Edit', edit_survey_section_path(@survey_section) %> |
+<%= link_to 'Back', survey_sections_path %>

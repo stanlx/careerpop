@@ -1,0 +1,35 @@
+<h1>Listing survey_sections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Survey header</th>
+      <th>Section name</th>
+      <th>Section title</th>
+      <th>Section subheading</th>
+      <th>Section required</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @survey_sections.each do |survey_section| %>
+      <tr>
+        <td><%= survey_section.survey_header_id %></td>
+        <td><%= survey_section.section_name %></td>
+        <td><%= survey_section.section_title %></td>
+        <td><%= survey_section.section_subheading %></td>
+        <td><%= survey_section.section_required %></td>
+        <td><%= link_to 'Show', survey_section %></td>
+        <td><%= link_to 'Edit', edit_survey_section_path(survey_section) %></td>
+        <td><%= link_to 'Destroy', survey_section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Survey section', new_survey_section_path %>

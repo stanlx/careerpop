@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user_survey_section.user_id %>
+</p>
+
+<p>
+  <strong>Survey section:</strong>
+  <%= @user_survey_section.survey_section_id %>
+</p>
+
+<p>
+  <strong>Completed on:</strong>
+  <%= @user_survey_section.completed_on %>
+</p>
+
+<%= link_to 'Edit', edit_user_survey_section_path(@user_survey_section) %> |
+<%= link_to 'Back', user_survey_sections_path %>

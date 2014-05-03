@@ -1,0 +1,31 @@
+<h1>Listing user_survey_sections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Survey section</th>
+      <th>Completed on</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_survey_sections.each do |user_survey_section| %>
+      <tr>
+        <td><%= user_survey_section.user_id %></td>
+        <td><%= user_survey_section.survey_section_id %></td>
+        <td><%= user_survey_section.completed_on %></td>
+        <td><%= link_to 'Show', user_survey_section %></td>
+        <td><%= link_to 'Edit', edit_user_survey_section_path(user_survey_section) %></td>
+        <td><%= link_to 'Destroy', user_survey_section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User survey section', new_user_survey_section_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  survey_header_id: 1
+  section_name: MyString
+  section_title: MyString
+  section_subheading: MyString
+  section_required: false
+
+two:
+  survey_header_id: 1
+  section_name: MyString
+  section_title: MyString
+  section_subheading: MyString
+  section_required: false

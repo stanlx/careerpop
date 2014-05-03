@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  survey_section_id: 1
+  input_type_id: 1
+  question_name: MyString
+  question_subtext: MyString
+  answer_required: false
+  allow_multiple_answers: false
+
+two:
+  survey_section_id: 1
+  input_type_id: 1
+  question_name: MyString
+  question_subtext: MyString
+  answer_required: false
+  allow_multiple_answers: false

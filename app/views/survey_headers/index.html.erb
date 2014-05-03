@@ -1,0 +1,31 @@
+<h1>Listing survey_headers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Survey name</th>
+      <th>Instructions</th>
+      <th>Other header info</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @survey_headers.each do |survey_header| %>
+      <tr>
+        <td><%= survey_header.survey_name %></td>
+        <td><%= survey_header.instructions %></td>
+        <td><%= survey_header.other_header_info %></td>
+        <td><%= link_to 'Show', survey_header %></td>
+        <td><%= link_to 'Edit', edit_survey_header_path(survey_header) %></td>
+        <td><%= link_to 'Destroy', survey_header, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Survey header', new_survey_header_path %>

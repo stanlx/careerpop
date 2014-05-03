@@ -1,4 +1,26 @@
 Popq::Application.routes.draw do
+  resources :origins
+
+  resources :option_choices
+
+  resources :option_groups
+
+  resources :survey_headers
+
+  resources :user_survey_sections
+
+  resources :survey_sections
+
+  resources :input_types
+
+  resources :questions
+
+  resources :question_options
+
+  resources :answers
+
+  resources :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

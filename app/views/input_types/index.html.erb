@@ -1,0 +1,27 @@
+<h1>Listing input_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Input type name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @input_types.each do |input_type| %>
+      <tr>
+        <td><%= input_type.input_type_name %></td>
+        <td><%= link_to 'Show', input_type %></td>
+        <td><%= link_to 'Edit', edit_input_type_path(input_type) %></td>
+        <td><%= link_to 'Destroy', input_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Input type', new_input_type_path %>

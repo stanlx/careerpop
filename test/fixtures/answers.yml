@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  question_option_id: 1
+  answer_number: 1
+  answer_text: MyString
+  answer_yn: false
+
+two:
+  user_id: 1
+  question_option_id: 1
+  answer_number: 1
+  answer_text: MyString
+  answer_yn: false

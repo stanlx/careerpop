@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  survey_section_id: 1
+  completed_on: 2014-05-03 03:18:13
+
+two:
+  user_id: 1
+  survey_section_id: 1
+  completed_on: 2014-05-03 03:18:13

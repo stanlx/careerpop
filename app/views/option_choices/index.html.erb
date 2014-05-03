@@ -1,0 +1,29 @@
+<h1>Listing option_choices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option group</th>
+      <th>Option choice name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @option_choices.each do |option_choice| %>
+      <tr>
+        <td><%= option_choice.option_group_id %></td>
+        <td><%= option_choice.option_choice_name %></td>
+        <td><%= link_to 'Show', option_choice %></td>
+        <td><%= link_to 'Edit', edit_option_choice_path(option_choice) %></td>
+        <td><%= link_to 'Destroy', option_choice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Option choice', new_option_choice_path %>

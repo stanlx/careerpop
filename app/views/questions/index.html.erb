@@ -1,0 +1,37 @@
+<h1>Listing questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Survey section</th>
+      <th>Input type</th>
+      <th>Question name</th>
+      <th>Question subtext</th>
+      <th>Answer required</th>
+      <th>Allow multiple answers</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.survey_section_id %></td>
+        <td><%= question.input_type_id %></td>
+        <td><%= question.question_name %></td>
+        <td><%= question.question_subtext %></td>
+        <td><%= question.answer_required %></td>
+        <td><%= question.allow_multiple_answers %></td>
+        <td><%= link_to 'Show', question %></td>
+        <td><%= link_to 'Edit', edit_question_path(question) %></td>
+        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Question', new_question_path %>

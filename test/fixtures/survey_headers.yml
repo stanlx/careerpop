@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  survey_name: MyString
+  instructions: MyString
+  other_header_info: MyString
+
+two:
+  survey_name: MyString
+  instructions: MyString
+  other_header_info: MyString

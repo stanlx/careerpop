@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Survey name:</strong>
+  <%= @survey_header.survey_name %>
+</p>
+
+<p>
+  <strong>Instructions:</strong>
+  <%= @survey_header.instructions %>
+</p>
+
+<p>
+  <strong>Other header info:</strong>
+  <%= @survey_header.other_header_info %>
+</p>
+
+<%= link_to 'Edit', edit_survey_header_path(@survey_header) %> |
+<%= link_to 'Back', survey_headers_path %>

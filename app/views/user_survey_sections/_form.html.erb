@@ -1,0 +1,29 @@
+<%= form_for(@user_survey_section) do |f| %>
+  <% if @user_survey_section.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_survey_section.errors.count, "error") %> prohibited this user_survey_section from being saved:</h2>
+
+      <ul>
+      <% @user_survey_section.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :survey_section_id %><br>
+    <%= f.number_field :survey_section_id %>
+  </div>
+  <div class="field">
+    <%= f.label :completed_on %><br>
+    <%= f.datetime_select :completed_on %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

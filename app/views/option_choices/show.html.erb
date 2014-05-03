@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Option group:</strong>
+  <%= @option_choice.option_group_id %>
+</p>
+
+<p>
+  <strong>Option choice name:</strong>
+  <%= @option_choice.option_choice_name %>
+</p>
+
+<%= link_to 'Edit', edit_option_choice_path(@option_choice) %> |
+<%= link_to 'Back', option_choices_path %>
