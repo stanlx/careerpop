@@ -9,4 +9,20 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Popq::Application.config.secret_key_base = 'aa34066ab4d871b60c5748bfd9c355b7c9510fce4727d26167a5bddce16ede764ff5743b05065199cb21fde1f9bd17d226e1dc75b7099359fd164275978a23a3'
+#Popq::Application.config.secret_key_base = 'aa34066ab4d871b60c5748bfd9c355b7c9510fce4727d26167a5bddce16ede764ff5743b05065199cb21fde1f9bd17d226e1dc75b7099359fd164275978a23a3'
+
+require 'securerandom'
+
+def secure_token
+	  token_file = Rails.root.join('.secret')
+		  if File.exist?(token_file)
+				    # Use the existing token.
+			      File.read(token_file).chomp
+		  else
+			      # Generate a new token and store it in token_file.
+			     token = SecureRandom.hex(64)
+			     File.write(token_file, token)
+			     token
+			end
+end
+Popq::Application.config.secret_key_base  = secure_token
