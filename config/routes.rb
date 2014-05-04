@@ -1,7 +1,7 @@
 Popq::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/help"
-  resources :origins
+	get "static_pages/home", :as => :home
+  get "static_pages/help", :as => :help
+	resources :origins
 
   resources :option_choices
 
