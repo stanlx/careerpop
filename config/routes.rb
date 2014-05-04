@@ -1,6 +1,10 @@
 Popq::Application.routes.draw do
-	get "static_pages/home", :as => :home
-  get "static_pages/help", :as => :help
+  root  'static_pages#home'
+
+	match '/home', to: 'static_pages#home', via: 'get', :as => :home
+	match '/help', to: 'static_pages#help', via: 'get', :as => :help
+  match '/signup', to: 'users#new', via: 'get'
+
 	resources :origins
 
   resources :option_choices
