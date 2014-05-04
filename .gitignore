@@ -25,4 +25,5 @@ doc/
 .idea
 .secret
 .del
+db/schema.rb
 
