@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	before_save { self.email = email.downcase }
 	has_many :user_survey_sections
 	has_many :answers
 	validates :fname, presence: true, length: {maximum: 25}
