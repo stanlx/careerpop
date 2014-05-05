@@ -15,5 +15,15 @@
   <%= @survey_header.other_header_info %>
 </p>
 
+  <div class="span8">
+		<% if @survey_header.survey_sections.any? %>
+			<h3> Survey Section (<%= @survey_header.survey_sections.count %> </h3>
+	      <ol class="survey_headers">
+	        <%= render @survey_sections %>
+	      </ol>
+	      <%= will_paginate @survey_sections %>
+		<% end %>
+		</div>
+
 <%= link_to 'Edit', edit_survey_header_path(@survey_header) %> |
 <%= link_to 'Back', survey_headers_path %>

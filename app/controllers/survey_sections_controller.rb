@@ -10,7 +10,9 @@ class SurveySectionsController < ApplicationController
   # GET /survey_sections/1
   # GET /survey_sections/1.json
   def show
-  end
+	 @survey_section = SurveySection.find(params[:id])
+   @questions = @survey_section.questions.paginate(page: params[:page])
+	end
 
   # GET /survey_sections/new
   def new

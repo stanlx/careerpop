@@ -1,6 +1,5 @@
 class SurveyHeadersController < ApplicationController
   before_action :set_survey_header, only: [:show, :edit, :update, :destroy]
-
   # GET /survey_headers
   # GET /survey_headers.json
   def index
@@ -10,7 +9,9 @@ class SurveyHeadersController < ApplicationController
   # GET /survey_headers/1
   # GET /survey_headers/1.json
   def show
-  end
+		@survey_header = SurveyHeader.find(params[:id])
+    @survey_sections = @survey_header.survey_sections.paginate(page: params[:page])
+	end
 
   # GET /survey_headers/new
   def new

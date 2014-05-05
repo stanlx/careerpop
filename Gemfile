@@ -22,7 +22,8 @@ group :test do
 	  gem 'capybara', '2.1.0'
 		gem 'factory_girl_rails', '4.2.1'
 end
-
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
 
